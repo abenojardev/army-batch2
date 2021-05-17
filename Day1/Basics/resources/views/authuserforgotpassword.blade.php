@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Auth User Forgot Password</title>
 </head>
 <body>
-    
+    <h1>Auth User Forgot Password</h1>
 </body>
 </html>
