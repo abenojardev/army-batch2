@@ -1,0 +1,17 @@
+Create All route/controller/view
+/
+/about-us
+/contact
+/services
+/gallery 
+/profile/anthony
+/profile/albert
+/services/cleaning
+/auth/user/forgot/password
+/search/product
+/products/filter/all/free
+/members
+/print
+/order/checkout
+/facebook/accounts/members/login
+
