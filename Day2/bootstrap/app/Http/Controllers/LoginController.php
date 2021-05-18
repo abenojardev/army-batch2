@@ -15,4 +15,9 @@ class LoginController extends Controller
     {
         return view('table');
     }
+
+    public function layout()
+    {
+        return view('layout');
+    }
 }

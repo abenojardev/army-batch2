@@ -14,7 +14,7 @@
         <div class="row align-items-center"> 
             <div class="col-12 mt-5">
                 <div class="card">
-                    <div class="card-body row"> 
+                    <div class="card-body row p-5"> 
 
                         <div class="col-10">
                             <h4>

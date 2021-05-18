@@ -11,3 +11,8 @@ Route::get('/table', [
     App\Http\Controllers\LoginController::class,
     'table'
 ]);
+
+Route::get('/layout', [
+    App\Http\Controllers\LoginController::class,
+    'layout'
+]);
