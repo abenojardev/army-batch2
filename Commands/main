@@ -1,0 +1,11 @@
+//create laravel
+composer create-project --prefer-dist laravel/laravel appname
+
+// run laravel
+php artisan serve
+
+// delete cache
+php artisan optimize
+
+// create controller
+php artisan make:controller ControllerName
