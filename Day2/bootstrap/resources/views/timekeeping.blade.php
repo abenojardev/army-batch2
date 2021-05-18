@@ -55,7 +55,7 @@
                     <li class="nav-item">
                         <a href="#" class=" text-white nav-link active" aria-current="page">
                         <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                        Home
+                        Dashboard
                         </a>
                     </li>
                     <li>
