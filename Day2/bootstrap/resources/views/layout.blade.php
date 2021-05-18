@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title> 
+    <title>Login</title>
+
+    <!-- added for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body class="">
@@ -54,31 +57,31 @@
                     <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="#" class=" text-white nav-link active" aria-current="page">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                        <i class="fa fa-user"></i>
                         Home
                         </a>
                     </li>
                     <li>
                         <a href="#" class=" text-white nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                        <i class="fa fa-bar-chart"></i>
                         Dashboard
                         </a>
                     </li>
                     <li>
                         <a href="#" class=" text-white nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                        <i class="fa fa-list"></i>
                         Orders
                         </a>
                     </li>
                     <li>
                         <a href="#" class=" text-white nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                        <i class="fa fa-star"></i>
                         Products
                         </a>
                     </li>
                     <li>
                         <a href="#" class=" text-white nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                        <i class="fa fa-users"></i>
                         Customers
                         </a>
                     </li>
