@@ -21,7 +21,7 @@
             </div>
             
             <div class="col-9 b-light">
-                @yield('body')
+                @yield('content')
             </div>
         </div>
     </div>

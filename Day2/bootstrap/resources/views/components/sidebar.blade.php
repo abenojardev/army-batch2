@@ -37,7 +37,7 @@
             </a>
         </li>  
         <li class="nav-item">
-            <a href="/payslip" class="nav-link @if($active == 'payslip') active @endif" aria-current="page"> 
+            <a href="/payslips" class="nav-link @if($active == 'payslip') active @endif" aria-current="page"> 
                 <i class="fa fa-file"></i>
                 Payslip
             </a>

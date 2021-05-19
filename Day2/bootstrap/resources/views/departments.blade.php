@@ -1,7 +1,7 @@
 @php $active = 'department' @endphp
 @extends('layouts.main')
 @section('title', 'Department')
-@section('body')
+@section('content')
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
             <div class="card">
