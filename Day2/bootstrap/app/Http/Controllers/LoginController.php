@@ -49,4 +49,14 @@ class LoginController extends Controller
     {
         return view('timekeeping');
     }
+
+    public function form()
+    {
+        return view('form');
+    }
+    
+    public function departments_create()
+    {
+        return view('create_form.departments');
+    }
 }

@@ -1,4 +1,4 @@
-@php $active = 'department' @endphp
+@php $active = 'department' @endphp 
 @extends('layouts.main')
 @section('title', 'Department')
 @section('content')
@@ -13,7 +13,7 @@
                         </h4>
                     </div>
                     <div class="col-2 text-end"> 
-                        <button class="btn btn-dark pull-right">Create</button>
+                        <a href="/departments/create" class="btn btn-dark pull-right">Create</a>
                     </div> 
                     <div class="col-12">
                         <hr>    

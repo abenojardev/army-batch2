@@ -17,6 +17,16 @@ Route::get('/layout', [
     'layout'
 ]);
 
+Route::get('/form', [
+    App\Http\Controllers\LoginController::class,
+    'form'
+]);
+
+
+Route::get('/departments/create', [
+    App\Http\Controllers\LoginController::class,
+    'departments_create'
+]);
 
 
 

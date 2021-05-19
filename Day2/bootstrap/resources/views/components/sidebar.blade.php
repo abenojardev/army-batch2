@@ -7,7 +7,7 @@
 
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="/departments" class="nav-link @if($active == 'department') active @endif" aria-current="page"> 
+            <a class="nav-link @if($active == 'department') active @endif"  href="/departments"aria-current="page"> 
                 <i class="fa fa-building"></i>
                 Department
             </a>
