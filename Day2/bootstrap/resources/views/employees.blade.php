@@ -1,3 +1,4 @@
+@php $active = 'employees' @endphp
 @extends('layouts.main')
 @section('title', 'Layout test')
 @section('content')

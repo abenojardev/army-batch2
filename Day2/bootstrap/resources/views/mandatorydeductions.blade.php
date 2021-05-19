@@ -1,3 +1,4 @@
+@php $active = 'mandatorydeductions' @endphp
 @extends('layouts.main')
 @section('title', 'Layout test')
 @section('content')
