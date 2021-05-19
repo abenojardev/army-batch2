@@ -29,9 +29,10 @@
                             <thead>
                                 <tr>
                                     <th class="text-muted" scope="col">#</th>
-                                    <th class="text-muted" scope="col">First</th>
-                                    <th class="text-muted" scope="col">Last</th>
-                                    <th class="text-muted" scope="col">Handle</th>
+                                    <th class="text-muted" scope="col">Department</th>
+                                    <th class="text-muted" scope="col">Created</th>
+                                    <th class="text-muted" scope="col">Updated</th>
+                                    <th class="text-muted" scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,19 +41,8 @@
                                     <td>Mark</td>
                                     <td>Otto</td>
                                     <td>@mdo</td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr> 
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr> 
+                                    <td></td>
+                                </tr>  
                             </tbody>
                         </table>
                     </div>
