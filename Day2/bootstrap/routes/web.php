@@ -29,6 +29,12 @@ Route::get('/departments/create', [
 ]);
 
 
+Route::get('/employees/create', [
+    App\Http\Controllers\LoginController::class,
+    'employees_create'
+]);
+
+
 
 
 

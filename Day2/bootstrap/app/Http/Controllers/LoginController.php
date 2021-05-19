@@ -59,4 +59,9 @@ class LoginController extends Controller
     {
         return view('create_form.departments');
     }
+    
+    public function employees_create()
+    {
+        return view('create_form.employees');
+    }
 }

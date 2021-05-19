@@ -1,6 +1,6 @@
-@php $active = 'department' @endphp 
+@php $active = 'employees' @endphp 
 @extends('layouts.main')
-@section('title', 'Create Department')
+@section('title', 'Create Employee')
 @section('content')
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
@@ -9,7 +9,7 @@
 
                     <div class="col-10">
                         <h4>
-                            Create Department 
+                            Create Employee 
                         </h4>
                     </div> 
                     <div class="col-12">
