@@ -1,6 +1,6 @@
 @extends('layouts.main')
-@section('title', 'Layout test')
-@section('content')
+@section('title', 'Layout Test')
+@section('body')
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
             <div class="card">

@@ -9,19 +9,19 @@
                         <a href="#" class="nav-link active" aria-current="page">
                         <!-- added for icons -->
                         <i class="fa fa-user"></i>
-                        Home
+                        Homess
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link link-dark">
-                        <i class="fa fa-bar-chart"></i>
-                        Dashboard
+                        <a href="/departments" class="nav-link link-dark">
+                            <i class="fa fa-bar-chart"></i>
+                            Departments
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link link-dark">
+                        <a href="/employees" class="nav-link link-dark">
                         <i class="fa fa-list"></i>
-                        Orders
+                            Employees
                         </a>
                     </li>
                     <li>
