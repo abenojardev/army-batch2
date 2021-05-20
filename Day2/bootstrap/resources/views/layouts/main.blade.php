@@ -28,6 +28,13 @@
     </div>
     
     <style> 
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        .content{
+            overflow-x: hidden;
+            overflow-y: scroll;
+        } 
         header{
             position:fixed;
             left:0; 
