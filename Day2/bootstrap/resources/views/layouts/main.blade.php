@@ -16,17 +16,46 @@
     
     <div class="main-content">
         <div style="margin-top: -1.2%;" class="row">
-            <div class="col-3">
+            <div class="col-3 sidebar">
                 @include('components.sidebar')
             </div>
             
-            <div class="col-9 b-light">
+            <div class="col-3"></div>
+            <div class="col-9 b-light content">
                 @yield('content')
             </div>
         </div>
     </div>
+    
+    <style> 
+        header{
+            position:fixed;
+            left:0; 
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .sidebar{
+            position:fixed;
+            left:0; 
+            top: 12.5%;
+            height: 100%;
+        }
+        .content{
+            margin-top: 7%;
+            margin-left: -3%;
+            padding-bottom: 5%;
+        }
+    </style>
 
-    <style>
+
+
+
+
+
+
+
+    <style>  
         .nav-link,
         .nav-link:hover{
             color: #212629;

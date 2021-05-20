@@ -64,4 +64,14 @@ class LoginController extends Controller
     {
         return view('create_form.employees');
     }
+
+    public function leaves_create()
+    {
+        return view('create_form.leaves');
+    }
+
+    public function loans_create()
+    {
+        return view('create_form.loans');
+    }
 }

@@ -35,6 +35,16 @@ Route::get('/employees/create', [
 ]);
 
 
+Route::get('/leaves/create', [
+    App\Http\Controllers\LoginController::class,
+    'leaves_create'
+]);
+Route::get('/loans/create', [
+    App\Http\Controllers\LoginController::class,
+    'loans_create'
+]);
+
+
 
 
 
