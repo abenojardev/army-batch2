@@ -1,0 +1,42 @@
+# Laravel & Bootstrap Basics
+
+## Goal : 
+	To successfully create ecommerce backend system using laravel as the backend side 
+	and Bootstrap as our design utility.
+
+## Project
+	Day4 folder -> Ecom 
+
+## Instructions
+	1. Recall your codes on "Day2/bootstrap" this activity is almost a duplicate idea of it.
+	2. On Ecom app this are the sidebar menus:
+		a. Products
+		b. Categories
+		c. Orders
+		d. Customers 
+	3. Each page will show a table. and shows the following datas:
+		a. Products	
+			i. name	
+			ii. category	
+			iii. price	
+			iv. brand	
+			v. description
+		b. Categories
+			i. name	
+			ii. description	  
+		c. Orders
+			i. customer name	
+			ii. contact
+			iii. address	
+			iv. product
+			v. quantity
+			vi. total
+			vii. shipment status	 
+		d. Customers 
+			i. name	
+			ii. contact
+			iii. address	
+			iv. gender
+			v. age
+			vi. email address
+	4. Same with "Day2/bootstrap", each page should also have create form page
