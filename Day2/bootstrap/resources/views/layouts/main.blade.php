@@ -38,8 +38,9 @@
         .sidebar{
             position:fixed;
             left:0; 
-            top: 12.5%;
+            top: 12.5% !important;
             height: 100%;
+            padding-left: 0 !important;
         }
         .content{
             margin-top: 7%;
