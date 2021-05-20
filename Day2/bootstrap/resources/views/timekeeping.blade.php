@@ -13,7 +13,7 @@
                         </h4>
                     </div>
                     <div class="col-2 text-end"> 
-                        <button class="btn btn-dark pull-right">Create</button>
+                        <a href="/timekeeping/create" class="btn btn-dark pull-right">Create</a>
                     </div> 
                     <div class="col-12">
                         <hr>    

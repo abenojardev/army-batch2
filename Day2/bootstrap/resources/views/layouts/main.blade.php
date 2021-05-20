@@ -47,7 +47,7 @@
             left:0; 
             top: 12.5% !important;
             height: 100%;
-            padding-left: 0 !important;
+            padding-left: 1% !important;
         }
         .content{
             margin-top: 7%;

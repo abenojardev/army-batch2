@@ -43,6 +43,20 @@ Route::get('/loans/create', [
     App\Http\Controllers\LoginController::class,
     'loans_create'
 ]);
+Route::get('/deductions/create', [
+    App\Http\Controllers\LoginController::class,
+    'deductions_create'
+]);
+
+Route::get('/timekeeping/create', [
+    App\Http\Controllers\LoginController::class,
+    'timekeeping_create'
+]);
+
+Route::get('/payslips/create', [
+    App\Http\Controllers\LoginController::class,
+    'payslips_create'
+]);
 
 
 

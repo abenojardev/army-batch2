@@ -74,4 +74,20 @@ class LoginController extends Controller
     {
         return view('create_form.loans');
     }
+
+    public function deductions_create()
+    {
+        return view('create_form.deductions');
+    }
+
+    public function timekeeping_create()
+    {
+        return view('create_form.timekeeping');
+    }
+
+    public function payslips_create()
+    {
+        return view('create_form.payslips');
+    }
+
 }
