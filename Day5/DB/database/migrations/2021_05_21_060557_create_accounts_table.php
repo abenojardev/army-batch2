@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTeachersTable extends Migration
+class CreateAccountsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class CreateTeachersTable extends Migration
      */
     public function up()
     {
-        Schema::create('teachers', function (Blueprint $table) {
+        Schema::create('accounts', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('middle_name');
-            $table->enum('gender', [
-                'Male', 'Female'
-            ]);
-            $table->date('birthday');  
+            $table->string('username'); 
+            $table->string('password'); 
+            $table->enum('account_type',[
+                'teacher', 'staff'
+            ]); 
+            $table->enum('teacher',[
+                'teacher_1', 'teacher_2'
+            ]); 
+
             $table->timestamps();
         });
     }
@@ -33,6 +35,6 @@ class CreateTeachersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teachers');
+        Schema::dropIfExists('accounts');
     }
 }
