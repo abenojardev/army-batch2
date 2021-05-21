@@ -9,3 +9,8 @@ php artisan optimize
 
 // create controller
 php artisan make:controller ControllerName
+
+//create migration
+php artisan make:migration create_{tablename}_table
+ex.
+php artisan make:migration create_teachers_table
