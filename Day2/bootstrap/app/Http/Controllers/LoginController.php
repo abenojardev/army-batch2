@@ -88,6 +88,5 @@ class LoginController extends Controller
     public function payslips_create()
     {
         return view('create_form.payslips');
-    }
-
+    } 
 }

@@ -13,19 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{page}',[
-    App\Http\Controllers\PageController::class,
-    'index'
-]);
-
-Route::get('/create/{page}',[
-    App\Http\Controllers\FormController::class,
-    'index'
-]);
-
-
-Route::get('/product',[
-    // php artisan make:controller TestController
-    App\Http\Controllers\TestController::class,
-    'product'
-]);
+Route::get('/', function () {
+    return view('welcome');
+});
