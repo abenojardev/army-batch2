@@ -23,7 +23,7 @@ class CreateEmployeesTable extends Migration
             $table->string('address');
             $table->date('birthday');
             $table->enum('gender',[
-                'male', 'femail'
+                'male', 'female'
             ]);
             $table->string('designation');
             $table->double('rate');
