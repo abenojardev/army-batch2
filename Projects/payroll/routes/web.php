@@ -58,16 +58,6 @@ Route::get('/payslips/create', [
     'payslips_create'
 ]);
 
-
-
-
-
-
-
-
-
-
-
  
 Route::get('/departments', [
     App\Http\Controllers\LoginController::class,
@@ -96,4 +86,10 @@ Route::get('/mandatory-deductions', [
 Route::get('/timekeeping', [
     App\Http\Controllers\LoginController::class,
     'timekeeping'
+]);
+
+
+Route::get('/timekeeping/view', [
+    App\Http\Controllers\LoginController::class,
+    'timekeeping_view'
 ]);

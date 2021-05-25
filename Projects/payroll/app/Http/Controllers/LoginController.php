@@ -89,4 +89,9 @@ class LoginController extends Controller
     {
         return view('create_form.payslips');
     } 
+
+    public function timekeeping_view()
+    {
+        return view('view.timekeeping');
+    }
 }
