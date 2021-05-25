@@ -4,6 +4,8 @@
 @section('content')
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
+            <!-- copy this -->
+            <!-- paste below col-12 on your code  -->
             <div class="payslip-card">
                 <div class="company-info">
                     <div class="info">
@@ -172,9 +174,12 @@
                     <p> <b>Cut-off : <small class="val">Feb 12, 2021 - Feb 13, 2021</small></b> </p>
                 </div>
             </div>
+
+            <!-- up to this-->
         </div> 
     </div>
 
+    <!-- copy this-->
     <style type="text/css"> 
         .payslip-card{width: 100%; float: left; padding: 2%;}
         .payslip-card .company-info{width: 100%; float: left; border-bottom: 1px solid #333; padding-bottom: 2%;}
@@ -214,4 +219,5 @@
             .c-navbar{display: none;}
         }
     </style>
+    <!-- up to this-->
 @endsection
