@@ -94,4 +94,9 @@ class LoginController extends Controller
     {
         return view('view.timekeeping');
     }
+    public function payslip_view()
+    {
+        return view('view.payslip');
+    }
+    
 }

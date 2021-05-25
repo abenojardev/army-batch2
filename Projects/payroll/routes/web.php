@@ -93,3 +93,7 @@ Route::get('/timekeeping/view', [
     App\Http\Controllers\LoginController::class,
     'timekeeping_view'
 ]);
+Route::get('/payslip/view', [
+    App\Http\Controllers\LoginController::class,
+    'payslip_view'
+]);
