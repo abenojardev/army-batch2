@@ -21,7 +21,7 @@
                 <a href="/" class="btn btn-danger">Cancel</a>
             </div>
             <div class="col-12 mt-5">
-                <form action="" method="post">
+                <form action="/create/save" method="post">
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">First Name</label>

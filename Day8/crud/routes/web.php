@@ -11,3 +11,8 @@ Route::get('/create',[
     App\Http\Controllers\CreateController::class,
     'index'
 ]);
+
+Route::post('/create/save',[
+    App\Http\Controllers\CreateController::class,
+    'save'
+]);
