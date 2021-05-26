@@ -5,17 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class CreateController extends Controller
-{   
-    // declare variable
+{    
     protected $request;
-
-    // initiate class upon controller start
-    public function __contruct(Request $request)
-    {
-        // make the request available on the class
+ 
+    public function __construct(Request $request)
+    { 
         $this->request = $request;
     }
-
 
     public function index()
     {
@@ -24,6 +20,8 @@ class CreateController extends Controller
 
     public function save()
     {
-        //
+        dd(
+            $this->request->all()
+        );
     }
 }
