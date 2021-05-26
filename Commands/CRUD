@@ -2,3 +2,6 @@
 2. Form should have Action and method
 3. Action = route where the data will processed
 4. Method = How will the post interact 
+5. @csrf
+6. All fields should have a name=""
+7. All names should be same with migration
