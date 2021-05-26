@@ -22,6 +22,7 @@
             </div>
             <div class="col-12 mt-5">
                 <form action="" method="post">
+                    @csrf
                     <div class="mb-3">
                         <label class="form-label">First Name</label>
                         <input type="text" class="form-control" name="first_name">
