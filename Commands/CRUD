@@ -1,0 +1,4 @@
+1. ALl fields are inside the form tag <form></form>
+2. Form should have Action and method
+3. Action = route where the data will processed
+4. Method = How will the post interact 
