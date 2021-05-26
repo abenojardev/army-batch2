@@ -25,38 +25,38 @@
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">First Name</label>
-                        <input type="text" class="form-control" name="first_name">
+                        <input type="text" class="form-control" name="first_name" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Last Name</label>
-                        <input type="text" class="form-control" name="last_name">
+                        <input type="text" class="form-control" name="last_name" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Middle Name</label>
-                        <input type="text" class="form-control" name="middle_name">
+                        <input type="text" class="form-control" name="middle_name" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Age</label>
-                        <input type="number" class="form-control" name="age">
+                        <input type="number" class="form-control" name="age" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Contact</label>
-                        <input type="number" class="form-control" name="contact">
+                        <input type="number" class="form-control" name="contact" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Birthday</label>
-                        <input type="date" class="form-control" name="birthday">
+                        <input type="date" class="form-control" name="birthday" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Gender</label>
-                        <select class="form-control" name="gender">
+                        <select class="form-control" name="gender" required>
                             <option>Male</option>
                             <option>Female</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Address</label>
-                        <textarea class="form-control" name="address" rows="3"></textarea>
+                        <textarea class="form-control" name="address" rows="3" required></textarea>
                     </div>
                     <div class="mb-3">
                         <button class="btn btn-success">Save</button>
