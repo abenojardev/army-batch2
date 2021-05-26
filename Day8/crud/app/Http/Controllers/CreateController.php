@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Personel; 
+use Redirect;
 
 class CreateController extends Controller
 {    
@@ -19,9 +21,12 @@ class CreateController extends Controller
     }
 
     public function save()
-    {
-        dd(
-            $this->request->all()
-        );
+    {  
+        // save to database
+        Personel::create(
+            $this->request->except('_token')
+        ); 
+
+        return Redirect::route('home');
     }
 }
