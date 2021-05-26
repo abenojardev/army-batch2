@@ -5,3 +5,4 @@
 5. @csrf
 6. All fields should have a name=""
 7. All names should be same with migration
+8. add  required in fields to avoid empty form submission

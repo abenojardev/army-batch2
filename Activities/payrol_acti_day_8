@@ -1,0 +1,16 @@
+1. Name the routes
+2. Form
+    wrap up the Form
+    add action
+    add method = post
+    add @csrf
+    add required field
+    add name according to migration
+3. Add models   
+    according to table's 
+    departments = Department
+    php artisan make:model Department
+4. Model
+    Softdelete
+    protected $fillable 
+    protected $table
