@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personel</title>
+    <title>Create Personel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
@@ -15,40 +15,25 @@
     <div class="container">
         <div class="row p-5">
             <div class="col-10">
-                <h1>Personels</h1>
+                <h1>Create Personels</h1>
             </div>
             <div class="col-2">
-                <a href="" class="btn btn-success">Add New</a>
+                <a href="/" class="btn btn-danger">Cancel</a>
             </div>
             <div class="col-12 mt-5">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">First name</th>
-                            <th scope="col">Last name</th>
-                            <th scope="col">Middle name</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Gender</th> 
-                            <th scope="col">Birthday</th>
-                            <th scope="col">Contact</th>
-                            <th scope="col">Address</th>
-                            <th scope="col"></th> 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                        </tr>
-                    </tbody>
-                </table>
+                <form action="" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control" name="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Example textarea</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-success">Save</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

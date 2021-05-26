@@ -18,7 +18,7 @@
                 <h1>Personels</h1>
             </div>
             <div class="col-2">
-                <a href="" class="btn btn-success">Add New</a>
+                <a href="/create" class="btn btn-success">Add New</a>
             </div>
             <div class="col-12 mt-5">
                 <table class="table">
