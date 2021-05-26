@@ -9,18 +9,18 @@
             <div class="payslip-card">
                 <div class="company-info">
                     <div class="info">
-                        <p> <b>CYAN Management Corporation</b>
-                            <br> <small>8th Floor, DPC Place Building, 2322, Chino Roces Avenue, Makati, 1200 Metro Manila</small>
-                            <br> <small><i>(02) 889 8862</i></small> </p>
+                        <p> <b>Philippine Army - Signal Regiment</b>
+                            <br> <small>Taguig City, Metro Manila</small>
+                            <br> <small><i>(02) 999 9999</i></small> </p>
                     </div>
-                    <div class="logo"> <img src="https://xsodia.space/payroll/assets/icon.png"> </div>
+                    <div class="logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Philippine_Army_Seal.svg/1200px-Philippine_Army_Seal.svg.png"> </div>
                 </div>
                 <div class="employee-info">
                     <div class="left">
                         <table>
                             <tr>
                                 <td class="info head">Employee ID</td>
-                                <td class="value">CYAN2018000001</td>
+                                <td class="value">PHASR-2021000001</td>
                             </tr>
                             <tr>
                                 <td class="info head">Fullname</td>
