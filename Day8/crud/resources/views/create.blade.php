@@ -23,12 +23,39 @@
             <div class="col-12 mt-5">
                 <form action="" method="post">
                     <div class="mb-3">
-                        <label class="form-label">Email address</label>
-                        <input type="email" class="form-control" name="">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="first_name">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Example textarea</label>
-                        <textarea class="form-control" rows="3"></textarea>
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="last_name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Middle Name</label>
+                        <input type="text" class="form-control" name="middle_name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Age</label>
+                        <input type="number" class="form-control" name="age">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contact</label>
+                        <input type="number" class="form-control" name="contact">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Birthday</label>
+                        <input type="date" class="form-control" name="birthday">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <select class="form-control" name="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <textarea class="form-control" name="address" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
                         <button class="btn btn-success">Save</button>
