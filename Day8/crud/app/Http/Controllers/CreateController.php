@@ -27,6 +27,6 @@ class CreateController extends Controller
             $this->request->except('_token')
         ); 
 
-        return Redirect::route('home');
+        return Redirect::route('home'); 
     }
 }
