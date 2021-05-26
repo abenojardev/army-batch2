@@ -15,4 +15,5 @@ Route::get('/create',[
 Route::post('/create/save',[
     App\Http\Controllers\CreateController::class,
     'save'
-])->name('create.save');
+])->name('create.save'); 
+ 
