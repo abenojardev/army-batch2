@@ -2,17 +2,29 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/**
+ * URI
+ * '/'
+ * This is what the user will access
+ * error 404
+ */
+Route::get('/', [
+    /**
+     * Controller
+     * Will handle the logic of the route
+     * error controller does not exists
+     */
+    App\Http\Controllers\DepartmentController::class,
+    /**
+     * method
+     * function that will run in the controller
+     * error method does not exists
+     */
+    'department'
+])->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::post('/save', [ 
+    App\Http\Controllers\DepartmentController::class, 
+    'save'
+])->name('save');
