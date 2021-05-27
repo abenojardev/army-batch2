@@ -16,3 +16,4 @@
     protected $table
 5. Create a controller for each module
 6. Start Create function for each module
+7. Display depart table
