@@ -36,17 +36,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                        </tr>
+                        @foreach($data as $x)
+                            <tr> 
+                                <th scope="row">{{ $x->first_name }}</th> 
+                                <th scope="row">{{ $x->last_name }}</th> 
+                                <th scope="row">{{ $x->middle_name }}</th> 
+                                <th scope="row">{{ $x->age }}</th> 
+                                <th scope="row">{{ $x->gender }}</th> 
+                                <th scope="row">{{ $x->birthday }}</th> 
+                                <th scope="row">{{ $x->contact }}</th> 
+                                <th scope="row">{{ $x->address }}</th> 
+                                <th scope="row"></th> 
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
