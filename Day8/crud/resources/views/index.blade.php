@@ -36,7 +36,9 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- loop the data from the table -->
                         @foreach($data as $x)
+                            <!-- $x is the iteration variable -->
                             <tr> 
                                 <th scope="row">{{ $x->first_name }}</th> 
                                 <th scope="row">{{ $x->last_name }}</th> 
