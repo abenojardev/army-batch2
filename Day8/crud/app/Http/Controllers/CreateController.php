@@ -25,7 +25,7 @@ class CreateController extends Controller
         // save to database
         Personel::create(
             $this->request->except('_token')
-        ); 
+        );  
 
         return Redirect::route('home'); 
     }
