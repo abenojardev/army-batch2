@@ -14,3 +14,76 @@ php artisan make:controller ControllerName
 php artisan make:migration create_{tablename}_table
 ex.
 php artisan make:migration create_teachers_table
+
+
+---------------------------------------------------
+Notes
+
+# Start Laravel server
+$ php artisan serve
+
+# Go to localhost/phpmyadmin
+1. Create database
+
+# Go to .env file
+   1. Update DB_DATABASE according to your database name
+
+# Remove all migrations 
+    1. database/migrations
+
+# Create Migrations
+$ php artisan make:migration create_{tablename}_table
+ex.
+$ php artisan make:migration create_departments_table
+
+# Migration folder
+    1. database/migrations
+
+# Migrations
+    Text -> string()
+     number -> integer()
+     choices -> enum(‘’, [
+     	 ‘choice1’, 'choice2’
+     ])
+     text long -> longText()
+     foreign -> unsignedBiginteger()->index()
+     $table->foreign(‘table1’)->references(‘id’)->on(‘depeartments’)
+
+# Migrate to database
+$ php artisan migrate
+
+# Model
+## Each Migration file is equivalent to a model
+$ php artisan make:model Department
+
+# Model Folder
+1. App/Models
+
+# Model
+1. $table - table name
+2. $fillable  - fields
+
+# Controller
+$ php artisan make:controller ControllerName
+## app/http/controllers
+
+#view
+resources/views
+always end with .blade.php
+
+#form
+method, action
+@csrf
+required 
+name (name is always the same as its migration field name)
+
+
+# Request
+protected $request
+
+public function __construct(Request $request) {
+	$this->request = $request;
+}
+
+# import model
+	
