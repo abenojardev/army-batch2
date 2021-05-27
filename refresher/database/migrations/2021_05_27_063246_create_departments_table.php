@@ -15,10 +15,11 @@ class CreateDepartmentsTable extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name');   
             $table->enum('status', [
-                'active', 'in-active'
-            ]);
+                'active', 
+                'in-active'
+            ]); 
             $table->timestamps();
         });
     }
