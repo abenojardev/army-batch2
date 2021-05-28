@@ -21,8 +21,8 @@ class IndexController extends Controller
         if($this->request->has('search')){
             $data = Event::where(
                 $this->request->by,
-                '=',  
-                $this->request->search
+                'LIKE',  
+                '%'.$this->request->search.'%'
             )->get(); 
             /**
              * Kinds of operator
