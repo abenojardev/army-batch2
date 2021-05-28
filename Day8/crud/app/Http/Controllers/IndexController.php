@@ -7,6 +7,7 @@ use App\Models\Personel;
 
 class IndexController extends Controller
 { 
+
     public function index()
     {  
         return view('index')->with([

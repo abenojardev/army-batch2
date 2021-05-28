@@ -12,8 +12,8 @@ Route::get('/create',[
     'index'
 ])->name('create');
 
-Route::post('/create/save',[
-    App\Http\Controllers\CreateController::class,
-    'save'
-])->name('create.save'); 
+Route::get('/update/{id}',[
+    App\Http\Controllers\UpdateController::class,
+    'index'
+])->name('update');
  

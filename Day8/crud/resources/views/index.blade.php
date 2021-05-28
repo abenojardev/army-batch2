@@ -48,7 +48,10 @@
                                 <th scope="row">{{ $x->birthday }}</th> 
                                 <th scope="row">{{ $x->contact }}</th> 
                                 <th scope="row">{{ $x->address }}</th> 
-                                <th scope="row"></th> 
+                                <th scope="row">
+                                    <a href="{{ URL::route('update', $x->id) }}" class="btn btn-success btn-sm">Update</a>
+                                    <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                </th> 
                             </tr>
                         @endforeach
                     </tbody>
