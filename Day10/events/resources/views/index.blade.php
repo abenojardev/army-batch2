@@ -23,12 +23,26 @@
             <!-- search box -->
             <div class="col-12">
                 <form action=""> 
-                    <input type="search" name="search" class="form-controls">
+                    <input type="search" name="search" class="form-controls" required>
 
                     <input type="radio" name="by" value="title"> Title
                     <input type="radio" name="by" value="location"> location 
                     <input type="radio" name="by" value="description"> description
                     <button>Search</button>
+                </form>
+                <br>
+                <form action=""> 
+                    <input type="date" name="date1" class="form-controls" required>
+                    <input type="date" name="date2" class="form-controls" required>
+ 
+                    <button>Search by Date</button>
+                </form>
+                <br>
+                <form action=""> 
+                    <input type="number" name="price1" class="form-controls" required>
+                    <input type="number" name="price2" class="form-controls" required>
+ 
+                    <button>Search by Price</button>
                 </form>
             </div>
             <!-- end of search box -->
