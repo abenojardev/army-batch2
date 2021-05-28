@@ -21,4 +21,15 @@ class UpdateController extends Controller
             'data' => Personel::find($id)
         ]);
     }
+
+    public function save($id)
+    {
+        // find the data
+        // update data 
+        Personel::find($id)->update(
+            $this->request->except('_token')
+        );
+
+        return Redirect::route('home');
+    }
 }

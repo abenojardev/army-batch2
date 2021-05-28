@@ -16,4 +16,9 @@ Route::get('/update/{id}',[
     App\Http\Controllers\UpdateController::class,
     'index'
 ])->name('update');
+
+Route::post('/update/{id}/save',[
+    App\Http\Controllers\UpdateController::class,
+    'save'
+])->name('update.save');
  

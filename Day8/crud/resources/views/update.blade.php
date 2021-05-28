@@ -21,31 +21,31 @@
                 <a href="/" class="btn btn-danger">Cancel</a>
             </div>
             <div class="col-12 mt-5">
-                <form action="/create/save" method="post">
+                <form action="{{ URL::route('update.save', $data->id) }}" method="post">
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">First Name</label>
-                        <input type="text" class="form-control" name="first_name" required>
+                        <input type="text" class="form-control" name="first_name" value="{{ $data->first_name }}" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Last Name</label>
-                        <input type="text" class="form-control" name="last_name" required>
+                        <input type="text" class="form-control" name="last_name" value="{{ $data->last_name }}" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Middle Name</label>
-                        <input type="text" class="form-control" name="middle_name" required>
+                        <input type="text" class="form-control" name="middle_name" value="{{ $data->middle_name }}" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Age</label>
-                        <input type="number" class="form-control" name="age" required>
+                        <input type="number" class="form-control" name="age" value="{{ $data->age }}" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Contact</label>
-                        <input type="number" class="form-control" name="contact" required>
+                        <input type="number" class="form-control" name="contact" value="{{ $data->contact }}" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Birthday</label>
-                        <input type="date" class="form-control" name="birthday" required>
+                        <input type="date" class="form-control" name="birthday" value="{{ $data->birthday }}" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Gender</label>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Address</label>
-                        <textarea class="form-control" name="address" rows="3" required></textarea>
+                        <textarea class="form-control" name="address" rows="3" required>{{ $data->address }}</textarea>
                     </div>
                     <div class="mb-3">
                         <button class="btn btn-success">Update</button>
