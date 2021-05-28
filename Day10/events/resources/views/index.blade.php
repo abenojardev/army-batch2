@@ -20,6 +20,18 @@
             <div class="col-2">
                 <a href="/create" class="btn btn-success">Add New</a>
             </div>
+            <!-- search box -->
+            <div class="col-12">
+                <form action=""> 
+                    <input type="search" name="search" class="form-controls">
+
+                    <input type="radio" name="by" value="title"> Title
+                    <input type="radio" name="by" value="location"> location 
+                    <input type="radio" name="by" value="description"> description
+                    <button>Search</button>
+                </form>
+            </div>
+            <!-- end of search box -->
             <div class="col-12 mt-5">
                 <table class="table">
                     <thead>
@@ -42,9 +54,9 @@
                                 <th scope="row">{{ $x->title }}</th>  
                                 <th scope="row">{{ $x->location }}</th>  
                                 <th scope="row">{{ $x->date }}</th>  
-                                <th scope="row">{{ $x->descrition }}</th>  
+                                <th scope="row">{{ $x->description }}</th>  
                                 <th scope="row">{{ $x->entrance_fee }}</th>   
-                                <th scope="row">
+                                <th scope="row" style="width:15%;">
                                     <a href="{{ URL::route('update', $x->id) }}" class="btn btn-success btn-sm">Update</a>
                                     <a href="{{ URL::route('delete', $x->id) }}" class="btn btn-danger btn-sm">Delete</a>
                                 </th> 
