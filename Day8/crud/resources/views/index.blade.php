@@ -24,6 +24,7 @@
                 <table class="table">
                     <thead>
                         <tr>
+                            <th scope="col"></th> 
                             <th scope="col">First name</th>
                             <th scope="col">Last name</th>
                             <th scope="col">Middle name</th>
@@ -40,6 +41,7 @@
                         @foreach($data as $x)
                             <!-- $x is the iteration variable -->
                             <tr> 
+                                <th scope="row">{{ $x->id }}</th> 
                                 <th scope="row">{{ $x->first_name }}</th> 
                                 <th scope="row">{{ $x->last_name }}</th> 
                                 <th scope="row">{{ $x->middle_name }}</th> 
@@ -50,7 +52,7 @@
                                 <th scope="row">{{ $x->address }}</th> 
                                 <th scope="row">
                                     <a href="{{ URL::route('update', $x->id) }}" class="btn btn-success btn-sm">Update</a>
-                                    <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="{{ URL::route('delete', $x->id) }}" class="btn btn-danger btn-sm">Delete</a>
                                 </th> 
                             </tr>
                         @endforeach
