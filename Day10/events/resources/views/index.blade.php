@@ -25,9 +25,9 @@
                 <form action=""> 
                     <input type="search" name="search" class="form-controls" required>
 
-                    <input type="radio" name="by" value="title"> Title
-                    <input type="radio" name="by" value="location"> location 
-                    <input type="radio" name="by" value="description"> description
+                    <input required type="radio" name="by" value="title"> Title
+                    <input required type="radio" name="by" value="location"> location 
+                    <input required type="radio" name="by" value="description"> description
                     <button>Search</button>
                 </form>
                 <br>
