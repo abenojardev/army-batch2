@@ -17,6 +17,8 @@ class UpdateController extends Controller
 
     public function index($id)
     {
-        return view('update');
+        return view('update')->with([
+            'data' => Personel::find($id)
+        ]);
     }
 }
