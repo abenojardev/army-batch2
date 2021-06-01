@@ -28,7 +28,7 @@ class MasterlistController extends Controller
     {
         // get data by its ID
         // pass the ID inside find()
-        $data = Masterlist::find(8);
+        $data = Masterlist::find(1);
          
         return dd($data);
     }
@@ -70,16 +70,19 @@ class MasterlistController extends Controller
 
         /**
          * Operator
-         * =
-         * != 
-         * <
-         * >
-         * <=
-         * >=
+         * = equal
+         * != not equal
+         * < less than
+         * > greater than
+         * <= less than or equal
+         * >= greater than or equal
+         * like
          */
         $data = Masterlist::select('name', 'gender', 'age')
-                        ->whereGender('male')
-                        ->where('age', '!=', 31) 
+                        // ->where('gender','=','male')
+                        // ->where('age', '!=', 31) 
+                        // ->where('age', '>', 50) 
+                        ->where('name', 'LIKE', '%mark%') 
                         ->get();
          
         return response()->json($data, 200, [], JSON_PRETTY_PRINT);
