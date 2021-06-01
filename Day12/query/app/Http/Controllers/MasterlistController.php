@@ -62,4 +62,30 @@ class MasterlistController extends Controller
         return dd($data);
     }
 
+    
+    public function where()
+    {
+        
+    }
+    
+    public function orwhere()
+    {
+        
+    }
+    
+    public function wherebetween()
+    {
+        
+    }
+    
+    public function wherein()
+    {
+        
+    }
+    
+    public function wherenull()
+    {
+        
+    }
+
 }
