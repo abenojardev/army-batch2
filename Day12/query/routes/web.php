@@ -2,17 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/1',[
+    App\Http\Controllers\MasterlistController::class,
+    'simple_query'
+]); 
+Route::get('/2',[
+    App\Http\Controllers\MasterlistController::class,
+    'select'
+]); 
+Route::get('/3',[
+    App\Http\Controllers\MasterlistController::class,
+    'find'
+]);  

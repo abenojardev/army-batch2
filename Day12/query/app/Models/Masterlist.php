@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Masterlist extends Model
 {
     use HasFactory;
-
+ 
     protected $table = "masterlist";
-
+ 
     protected $fillable = [
         "name",
         "age",
