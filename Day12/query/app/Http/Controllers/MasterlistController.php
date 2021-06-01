@@ -87,9 +87,12 @@ class MasterlistController extends Controller
 
     public function orwhere()
     {
+        // orwhere
+        // accepts 1 or more choice
         $data = Masterlist::select('name', 'age') 
                         ->where('age', '=', 9999999234) 
                         ->orWhere('age', '=', 12) 
+                        ->orWhere('age', '=', 21) 
                         ->get();
          
         return response()->json($data, 200, [], JSON_PRETTY_PRINT);
@@ -97,17 +100,40 @@ class MasterlistController extends Controller
 
     public function wherebetween()
     {
-        
+        // whereBetween(column_name, [range1, range2])
+        $data = Masterlist::select('name', 'birthday', 'age')  
+                        // ->whereBetween('birthday', [
+                        //     '2000-01-01',
+                        //     '2005-01-01'
+                        // ]) 
+                        ->whereBetween('age', [
+                            '20',
+                            '25'
+                        ])
+                        ->get();
+         
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
     }
 
     public function wherein()
     {
-        
+        // whereIn(columns_name, [...value])
+        $data = Masterlist::select('name', 'gender', 'age')
+                        ->whereIn('age', [21, 23, 12])  
+                        ->get(); 
+ 
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
     }
 
     public function wherenull()
     {
-        
+        // find for tables with null values on said column
+        // whereNull(columns_name)
+        $data = Masterlist::select('name', 'gender', 'age')
+                        ->whereNull('careated_at')  
+                        ->get(); 
+ 
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
     }
 
 }
