@@ -88,7 +88,8 @@ class MasterlistController extends Controller
     public function orwhere()
     {
         $data = Masterlist::select('name', 'age') 
-                        ->where('age', '=', 31) 
+                        ->where('age', '=', 9999999234) 
+                        ->orWhere('age', '=', 12) 
                         ->get();
          
         return response()->json($data, 200, [], JSON_PRETTY_PRINT);
