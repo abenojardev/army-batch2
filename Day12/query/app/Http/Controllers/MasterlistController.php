@@ -123,6 +123,7 @@ class MasterlistController extends Controller
         // whereIn(columns_name, [...value])
         $data = Masterlist::select('name', 'gender', 'age')
                         ->whereIn('age', [21, 23, 12])  
+                        ->whereIn('position', ['gen','sgt'])   
                         ->get(); 
  
         return response()->json($data, 200, [], JSON_PRETTY_PRINT);
@@ -133,7 +134,7 @@ class MasterlistController extends Controller
         // find for tables with null values on said column
         // whereNull(columns_name)
         $data = Masterlist::select('name', 'gender', 'age')
-                        ->whereNull('careated_at')  
+                        ->whereNull('created_at')  
                         ->get(); 
  
         return response()->json($data, 200, [], JSON_PRETTY_PRINT);
