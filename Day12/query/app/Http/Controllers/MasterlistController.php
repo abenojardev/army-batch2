@@ -81,8 +81,8 @@ class MasterlistController extends Controller
         $data = Masterlist::select('name', 'gender', 'age')
                         // ->where('gender','=','male')
                         // ->where('age', '!=', 31) 
-                        // ->where('age', '>', 50) 
-                        ->where('name', 'LIKE', '%mark%') 
+                        // ->where('age', '<', 50) 
+                        ->where('name', 'LIKE', '%m%') 
                         ->get();
          
         return response()->json($data, 200, [], JSON_PRETTY_PRINT);
