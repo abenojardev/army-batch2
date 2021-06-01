@@ -62,27 +62,48 @@ class MasterlistController extends Controller
         return dd($data);
     }
 
-    
+
     public function where()
     {
-        
+        // where(column, operator, string)
+        // where('gender', '=', 'female')
+
+        /**
+         * Operator
+         * =
+         * != 
+         * <
+         * >
+         * <=
+         * >=
+         */
+        $data = Masterlist::select('name', 'gender', 'age')
+                        ->whereGender('male')
+                        ->where('age', '!=', 31) 
+                        ->get();
+         
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
     }
-    
+
     public function orwhere()
     {
-        
+        $data = Masterlist::select('name', 'age') 
+                        ->where('age', '=', 31) 
+                        ->get();
+         
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
     }
-    
+
     public function wherebetween()
     {
         
     }
-    
+
     public function wherein()
     {
         
     }
-    
+
     public function wherenull()
     {
         
