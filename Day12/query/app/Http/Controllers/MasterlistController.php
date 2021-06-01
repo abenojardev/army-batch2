@@ -27,8 +27,39 @@ class MasterlistController extends Controller
     public function find()
     {
         // get data by its ID
-        $data = Masterlist::find(4);
+        // pass the ID inside find()
+        $data = Masterlist::find(8);
          
         return dd($data);
     }
+
+    public function count()
+    {
+        // will show total number of results in the query
+        $data = Masterlist::whereStatus('regular')
+                          ->count();
+         
+        return dd($data);
+    }
+
+    public function avg()
+    {
+        // will get average of a column
+        // pass the column to be computed
+        $data = Masterlist::whereGender('male')->avg('age');
+         
+        return dd($data);
+    }
+
+    public function exists()
+    {
+
+        // will find if the data exists on the table
+        // boolean = true / false
+        $data = Masterlist::whereAge(21) 
+                        ->exists();
+         
+        return dd($data);
+    }
+
 }
