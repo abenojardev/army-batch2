@@ -16,7 +16,19 @@ class ReportingController extends Controller
     }
 
     public function index()
-    {
-        return view('index');
+    { 
+        return view('index')->with([
+            'total_number_of_customers' => Customer::count(),
+            'total_number_of_customers_using_app' => Customer::whereDevice('app')->count(),
+            'total_number_of_customers_using_browser' => Customer::whereDevice('browser')->count(),
+            'female_customers' => Customer::whereGender('female')->count(),
+            'male_customers' => Customer::whereGender('male')->count(),
+            'age' => [
+                'child' => Customer::whereBetween('age', [0, 12])->count(),
+                'adolescence' => Customer::whereBetween('age', [13, 18])->count(),
+                'adult' => Customer::whereBetween('age', [19, 59])->count(),
+                'senioradult' => Customer::where('age', '>=', 60)->count()
+            ]
+        ]);
     }
 }

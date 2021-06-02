@@ -15,12 +15,23 @@
                 <h3>Reporting</h3>
                 <hr>
             </div>
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $total_number_of_customers }}</h5>
+                        <small class="card-text">
+                            Customers
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+
             <div class="col-3">
                 <div class="card"> 
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">{{ $total_number_of_customers_using_app }}</h5>
                         <small class="card-text">
-                            Some quick example 
+                            Customers using app
                         </small> 
                     </div>
                 </div>
@@ -28,9 +39,9 @@
             <div class="col-3">
                 <div class="card"> 
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">{{ $total_number_of_customers_using_browser }}</h5>
                         <small class="card-text">
-                            Some quick example 
+                            Customers using browser
                         </small> 
                     </div>
                 </div>
@@ -38,9 +49,9 @@
             <div class="col-3">
                 <div class="card"> 
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">{{ $female_customers }}</h5>
                         <small class="card-text">
-                            Some quick example 
+                            Female customers
                         </small> 
                     </div>
                 </div>
@@ -48,9 +59,53 @@
             <div class="col-3">
                 <div class="card"> 
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">{{ $male_customers }}</h5>
                         <small class="card-text">
-                            Some quick example 
+                            Male customer 
+                        </small> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $age['child'] }}</h5>
+                        <small class="card-text">
+                            Child customer 
+                        </small> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $age['adolescence'] }}</h5>
+                        <small class="card-text">
+                            Adolescence customer 
+                        </small> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $age['adult'] }}</h5>
+                        <small class="card-text">
+                            Adult customer 
+                        </small> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $age['senioradult'] }}</h5>
+                        <small class="card-text">
+                            Senior Adult customer 
                         </small> 
                     </div>
                 </div>
