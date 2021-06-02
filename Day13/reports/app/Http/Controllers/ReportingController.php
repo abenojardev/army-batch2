@@ -38,4 +38,34 @@ class ReportingController extends Controller
             ]
         ]);
     }
+    
+    public function orders()
+    {
+        $data = [
+            'total_earned' => Order::sum('total'),
+            'avg_order_total' => Order::avg('total'),
+            'category' => [
+                'Toys' => Order::whereCategory('Toys')->count(), 
+                'Books' => Order::whereCategory('Books')->count(), 
+                'Home Supplies' => Order::whereCategory('Home Supplies')->count(),
+                'Accessories' => Order::whereCategory('Accessories')->count(), 
+                'Gadgets' => Order::whereCategory('Gadgets')->count(), 
+                'Food' => Order::whereCategory('Food')->count(), 
+                'Appliances' => Order::whereCategory('Appliances')->count() 
+            ],
+            'status' => [
+                'processing' => Order::whereStatus('processing')->count(), 
+                'shipped' => Order::whereStatus('shipped')->count(), 
+                'delivered' => Order::whereStatus('delivered')->count(), 
+                'canceled' => Order::whereStatus('canceled')->count()
+            ],
+            'promotion' => [
+                'used' => Order::wherePromo('true')->count(), 
+                'not_used' => Order::wherePromo('false')->count() 
+            ]
+        ];
+
+
+        dd($data);
+    }
 }
