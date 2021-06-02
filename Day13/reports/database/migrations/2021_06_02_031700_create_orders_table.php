@@ -27,6 +27,9 @@ class CreateOrdersTable extends Migration
                 'processing', 'shipped', 
                 'delivered', 'canceled'
             ]);
+
+            $table->date('order_date');
+
             $table->timestamps();
 
             $table->foreign('customer_id')
