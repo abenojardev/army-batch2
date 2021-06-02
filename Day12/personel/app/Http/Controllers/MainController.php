@@ -8,13 +8,11 @@ use App\Models\Statistic;
 
 class MainController extends Controller
 {
-    protected $request, $personel, $statistics;
+    protected $request;
     
-    public function __construct(Request $request, Personel $personel, Statistic $statistics)
+    public function __construct(Request $request)
     {
-        $this->request = $request; 
-        $this->personel = $personel; 
-        $this->statistics = $statistics; 
+        $this->request = $request;  
     }
 
     public function main($case = null)
@@ -24,15 +22,83 @@ class MainController extends Controller
         }
 
         abort(500);
-    }
-
-    public function response($data)
-    {
-        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
-    }
+    } 
 
     public function one()
     {
-        return $this->response($this->personel::all());
+        $data = Personel::all();
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function two()
+    {
+        $data = Personel::avg('age');
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function three()
+    {
+        $data = Personel::find(8);
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function four()
+    {
+        $data = Personel::count();
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function five()
+    {
+        $data = Statistic::sum('weight');
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function six()
+    {
+        $data = Personel::select('last_name')->get();
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function seven()
+    {
+        $data = Personel::where('age', '<', 25)->get();
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function eight()
+    {
+        $data = Personel::where('age', '<', 30)->avg('age');
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function nine()
+    {
+        $data = Statistic::where('height', '<', 150)->count();
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function ten()
+    {
+        $data = Statistic::where('height', '>', 130)->sum('weight');
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+    }
+
+    public function eleven()
+    {
+        $data = Personel::select('last_name')
+                        ->where('id', '>', 10)->get();
+
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
     }
 }
