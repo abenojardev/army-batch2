@@ -100,7 +100,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col-3 mt-2">
                 <div class="card"> 
                     <div class="card-body">
                         <h5 class="card-title">{{ $age['senioradult'] }}</h5>
@@ -110,9 +110,69 @@
                     </div>
                 </div>
             </div>
-            <div class="col-9"></div>
+            <div class="col-3 mt-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $country['ASIA'] }}</h5>
+                        <small class="card-text">
+                            Customer  in ASIA
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mt-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $country['EUROPE'] }}</h5>
+                        <small class="card-text">
+                            Customer  in EUROPE
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mt-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $country['US'] }}</h5>
+                        <small class="card-text">
+                            Customer  in US
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mt-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $country['AFRICA'] }}</h5>
+                        <small class="card-text">
+                            Customer  in AFRICA
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mt-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $country['AUSTRALIA'] }}</h5>
+                        <small class="card-text">
+                            Customer  in AUSTRALIA
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-6"></div>
+
             <div class="col-3">
                 <canvas id="bydevice" width="100px" height="100px"></canvas>
+            </div>
+            <div class="col-3">
+                <canvas id="bygender" width="100px" height="100px"></canvas>
+            </div>
+            <div class="col-3">
+                <canvas id="byage" width="100px" height="100px"></canvas>
+            </div>
+            <div class="col-3">
+                <canvas id="bycountry" width="100px" height="100px"></canvas>
             </div>
 
         </div>
@@ -122,6 +182,114 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     
     <script> 
+    var myChart = new Chart(document.getElementById('bycountry').getContext('2d'), {
+        type: 'pie',
+        data: {
+            labels: [
+                'ASIA',
+                'EUROPE',
+                'US',
+                'AFRICA',
+                'AUSTRALIA'
+            ],
+            datasets: [{ 
+                data: [
+                    {{ $country['ASIA'] }},
+                    {{ $country['EUROPE'] }},
+                    {{ $country['US'] }},
+                    {{ $country['AFRICA'] }},
+                    {{ $country['AUSTRALIA'] }}
+                ],
+                backgroundColor: [
+                    'brown',
+                    'royalblue',
+                    'gray',
+                    'black',
+                    'orange'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Customers by country'
+                }
+            }
+        }
+    });
+    var myChart = new Chart(document.getElementById('byage').getContext('2d'), {
+        type: 'pie',
+        data: {
+            labels: [
+                'Child',
+                'Adolescence',
+                'Adult',
+                'Senior Adult'
+            ],
+            datasets: [{ 
+                data: [
+                    {{ $age['child'] }},
+                    {{ $age['adolescence'] }},
+                    {{ $age['adult'] }},
+                    {{ $age['senioradult'] }}
+                ],
+                backgroundColor: [
+                    'gray',
+                    'orange',
+                    'blue',
+                    'grey',
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Customers by Age group'
+                }
+            }
+        }
+    });
+    var myChart = new Chart(document.getElementById('bygender').getContext('2d'), {
+        type: 'pie',
+        data: {
+            labels: [
+                'Male',
+                'Female' 
+            ],
+            datasets: [{ 
+                data: [
+                    {{ $male_customers }}, 
+                    {{ $female_customers }}
+                ],
+                backgroundColor: [
+                    'black',
+                    'pink' 
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Customers by Gender'
+                }
+            }
+        }
+    });
     var myChart = new Chart(document.getElementById('bydevice').getContext('2d'), {
         type: 'pie',
         data: {

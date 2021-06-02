@@ -28,6 +28,13 @@ class ReportingController extends Controller
                 'adolescence' => Customer::whereBetween('age', [13, 18])->count(),
                 'adult' => Customer::whereBetween('age', [19, 59])->count(),
                 'senioradult' => Customer::where('age', '>=', 60)->count()
+            ],
+            'country' => [
+                'ASIA' => Customer::whereCountry('ASIA')->count(), 
+                'EUROPE' => Customer::whereCountry('EUROPE')->count(), 
+                'US' => Customer::whereCountry('US')->count(), 
+                'AFRICA' => Customer::whereCountry('AFRICA')->count(), 
+                'AUSTRALIA' => Customer::whereCountry('AUSTRALIA')->count()
             ]
         ]);
     }
