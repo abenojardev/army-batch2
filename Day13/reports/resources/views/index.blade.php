@@ -239,7 +239,7 @@
                     {{ $age['senioradult'] }}
                 ],
                 backgroundColor: [
-                    'gray',
+                    'peach',
                     'orange',
                     'blue',
                     'grey',
