@@ -1,0 +1,7 @@
+Customer
+    1. Total number of customers
+    2. Total number of customers per country
+    3. Total number of customers by gender
+    4. Total number of customers by age group
+    5. Total number of customers by devices
+Orders
