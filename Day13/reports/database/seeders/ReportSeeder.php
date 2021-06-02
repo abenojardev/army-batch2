@@ -23,10 +23,10 @@ class ReportSeeder extends Seeder
 
             // initiate faker
             $faker = Factory::create();
-            
+
             $customer = Customer::create([
-                'full_name' => '',
-                'country' => '',
+                'full_name' => $faker->name(),
+                'country' => $faker->country(),
                 'age' => '',
                 'gender' => '',
                 'device' => ''
