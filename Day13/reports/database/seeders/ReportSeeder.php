@@ -50,7 +50,7 @@ class ReportSeeder extends Seeder
                 'Accessories', 'Gadgets', 'Food', 
                 'Appliances'
             ];
-
+ 
             $status = [
                 'processing', 'shipped', 
                 'delivered', 'canceled'
