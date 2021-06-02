@@ -130,10 +130,13 @@
                 'Browser' 
             ],
             datasets: [{ 
-                data: [469, 532],
+                data: [
+                    {{ $total_number_of_customers_using_app }}, 
+                    {{ $total_number_of_customers_using_browser }}
+                ],
                 backgroundColor: [
-                    'red',
-                    'yellow' 
+                    'darkyellow',
+                    'lightblue' 
                 ]
             }]
         },
