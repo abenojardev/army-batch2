@@ -19,9 +19,39 @@
                 <div class="card"> 
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
+                        <small class="card-text">
                             Some quick example 
-                        </p> 
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <small class="card-text">
+                            Some quick example 
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <small class="card-text">
+                            Some quick example 
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <small class="card-text">
+                            Some quick example 
+                        </small> 
                     </div>
                 </div>
             </div>
