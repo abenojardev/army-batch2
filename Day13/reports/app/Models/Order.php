@@ -16,6 +16,7 @@ class Order extends Model
         'total',
         'category',
         'promo',
-        'status'
+        'status',
+        'order_date'
     ];
 }

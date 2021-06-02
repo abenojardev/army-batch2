@@ -17,6 +17,7 @@ class ReportSeeder extends Seeder
      */
     public function run()
     {
+        // https://github.com/fzaninotto/Faker
         // this will run the script for x amount of times
         for ($i=0; $i <= 1000; $i++) { 
             //create customer
@@ -42,6 +43,26 @@ class ReportSeeder extends Seeder
                 'age' => $faker->numberBetween(15,60),
                 'gender' => $faker->randomElement($gender),
                 'device' => $faker->randomElement($device)
+            ]);
+
+            $category = [
+                'Toys', 'Books', 'Home Supplies',
+                'Accessories', 'Gadgets', 'Food', 
+                'Appliances'
+            ];
+
+            $status = [
+                'processing', 'shipped', 
+                'delivered', 'canceled'
+            ];
+
+            Order::create([
+                'customer_id' => $customer->id,
+                'total' => $faker->randomFloat(2, 100, 100000),
+                'category' => $faker->randomElement($category),
+                'promo' => $faker->boolean(50),
+                'status' => $faker->randomElement($status),
+                'order_date' => $faker->dateTimeBetween('-10 years') 
             ]);
         }
     }
