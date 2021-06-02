@@ -11,35 +11,9 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-3">
-                <div class="card"> 
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example 
-                        </p> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card"> 
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example 
-                        </p> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card"> 
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example 
-                        </p> 
-                    </div>
-                </div>
+            <div class="col-12">
+                <h3>Reporting</h3>
+                <hr>
             </div>
             <div class="col-3">
                 <div class="card"> 
