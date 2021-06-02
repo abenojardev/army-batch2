@@ -24,12 +24,24 @@ class ReportSeeder extends Seeder
             // initiate faker
             $faker = Factory::create();
 
+            $country = [
+                'ASIA', 'EUROPE', 'US', 'AFRICA', 'AUSTRALIA'
+            ];
+
+            $gender = [
+                'male', 'female'
+            ];
+
+            $device = [
+                'app', 'browser'
+            ];
+
             $customer = Customer::create([
                 'full_name' => $faker->name(),
-                'country' => $faker->country(),
-                'age' => '',
-                'gender' => '',
-                'device' => ''
+                'country' => $faker->randomElement($country),
+                'age' => $faker->numberBetween(15,60),
+                'gender' => $faker->randomElement($gender),
+                'device' => $faker->randomElement($device)
             ]);
         }
     }
