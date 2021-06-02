@@ -110,10 +110,46 @@
                     </div>
                 </div>
             </div>
+            <div class="col-9"></div>
+            <div class="col-3">
+                <canvas id="bydevice" width="100px" height="100px"></canvas>
+            </div>
+
         </div>
     </div>
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    <script> 
+    var myChart = new Chart(document.getElementById('bydevice').getContext('2d'), {
+        type: 'pie',
+        data: {
+            labels: [
+                'App',
+                'Browser' 
+            ],
+            datasets: [{ 
+                data: [469, 532],
+                backgroundColor: [
+                    'red',
+                    'yellow' 
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Customers by Device'
+                }
+            }
+        }
+    });
+    </script>
 </body>
 </html>
