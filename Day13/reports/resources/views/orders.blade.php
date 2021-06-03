@@ -264,6 +264,77 @@
                 }
             }
         });
+
+var myChart = new Chart(document.getElementById('bystatus').getContext('2d'), {
+    type: 'pie',
+    data: {
+        labels: [
+            'processing',
+            'shipped',
+            'delivered',
+            'canceled',
+        ],
+        datasets: [{ 
+            data: [
+                {{ $data['status']['processing'] }},
+                {{ $data['status']['shipped'] }},
+                {{ $data['status']['delivered'] }},
+                {{ $data['status']['canceled'] }} 
+            ],
+            backgroundColor: [
+                'orange',
+                'blue',
+                'green',
+                'red'
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Orders per status'
+            }
+        }
+    }
+});
+
+
+var myChart = new Chart(document.getElementById('bypromo').getContext('2d'), {
+            type: 'pie',
+            data: {
+                labels: [
+                    'With Promotions',
+                    'Without Promotions' 
+                ],
+                datasets: [{ 
+                    data: [
+                        {{ $data['promotion']['used'] }},
+                        {{ $data['promotion']['not_used'] }} 
+                    ],
+                    backgroundColor: [
+                        'green',
+                        'red' 
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Orders per promotion'
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>
