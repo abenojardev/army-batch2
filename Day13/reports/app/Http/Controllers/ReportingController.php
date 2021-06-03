@@ -114,4 +114,210 @@ class ReportingController extends Controller
  
         return view('orders')->withData($data); 
     }
+
+    public function summary()
+    {
+        $data = [
+            "total_order" => [ 
+                '10' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(10), 
+                            Carbon::parse('2021-12-31')->subYears(10) ]
+                        )->count(),
+                '9' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(9), 
+                            Carbon::parse('2021-12-31')->subYears(9) ]
+                        )->count(),
+                '8' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(8), 
+                            Carbon::parse('2021-12-31')->subYears(8) ]
+                        )->count(),
+                '7' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(7), 
+                            Carbon::parse('2021-12-31')->subYears(7) ]
+                        )->count(),
+                '6' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(6), 
+                            Carbon::parse('2021-12-31')->subYears(6) ]
+                        )->count(),
+                '5' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(5), 
+                            Carbon::parse('2021-12-31')->subYears(5) ]
+                        )->count(),
+                '4' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(4), 
+                            Carbon::parse('2021-12-31')->subYears(4) ]
+                        )->count(),
+                '3' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(3), 
+                            Carbon::parse('2021-12-31')->subYears(3) ]
+                        )->count(),
+                '2' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(2), 
+                            Carbon::parse('2021-12-31')->subYears(2) ]
+                        )->count(),
+                '1' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(1), 
+                            Carbon::parse('2021-12-31')->subYears(1) ]
+                        )->count(),
+                '0' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01'), 
+                            Carbon::parse('2021-12-31') ]
+                        )->count(),
+            ],
+            'cancelled_orders' => [
+
+                '10' => Order::whereBetween('order_date', [ 
+                    Carbon::parse('2021-01-01')->subYears(10), 
+                    Carbon::parse('2021-12-31')->subYears(10) ]
+                )->where('status', '=', 'canceled')->count(),
+                '9' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(9), 
+                            Carbon::parse('2021-12-31')->subYears(9) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '8' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(8), 
+                            Carbon::parse('2021-12-31')->subYears(8) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '7' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(7), 
+                            Carbon::parse('2021-12-31')->subYears(7) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '6' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(6), 
+                            Carbon::parse('2021-12-31')->subYears(6) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '5' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(5), 
+                            Carbon::parse('2021-12-31')->subYears(5) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '4' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(4), 
+                            Carbon::parse('2021-12-31')->subYears(4) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '3' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(3), 
+                            Carbon::parse('2021-12-31')->subYears(3) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '2' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(2), 
+                            Carbon::parse('2021-12-31')->subYears(2) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '1' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(1), 
+                            Carbon::parse('2021-12-31')->subYears(1) ]
+                        )->where('status', '=', 'canceled')->count(),
+                '0' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01'), 
+                            Carbon::parse('2021-12-31') ]
+                        )->where('status', '=', 'canceled')->count(),
+            ],
+            'delivered_orders' => [ 
+                '10' => Order::whereBetween('order_date', [ 
+                    Carbon::parse('2021-01-01')->subYears(10), 
+                    Carbon::parse('2021-12-31')->subYears(10) ]
+                )->where('status', '=', 'delivered')->count(),
+                '9' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(9), 
+                            Carbon::parse('2021-12-31')->subYears(9) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '8' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(8), 
+                            Carbon::parse('2021-12-31')->subYears(8) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '7' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(7), 
+                            Carbon::parse('2021-12-31')->subYears(7) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '6' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(6), 
+                            Carbon::parse('2021-12-31')->subYears(6) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '5' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(5), 
+                            Carbon::parse('2021-12-31')->subYears(5) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '4' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(4), 
+                            Carbon::parse('2021-12-31')->subYears(4) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '3' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(3), 
+                            Carbon::parse('2021-12-31')->subYears(3) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '2' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(2), 
+                            Carbon::parse('2021-12-31')->subYears(2) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '1' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(1), 
+                            Carbon::parse('2021-12-31')->subYears(1) ]
+                        )->where('status', '=', 'delivered')->count(),
+                '0' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01'), 
+                            Carbon::parse('2021-12-31') ]
+                        )->where('status', '=', 'delivered')->count(),
+            ]
+
+        ];
+
+        return view('summary')->withData($data);
+    }
+
+    public function category($category)
+    {
+        $data = [
+            'processing' => Order::whereCategory($category)->whereStatus('processing')->count(),
+            'shipped' => Order::whereCategory($category)->whereStatus('shipped')->count(),
+            'delivered' => Order::whereCategory($category)->whereStatus('delivered')->count(),
+            'cancelled' => Order::whereCategory($category)->whereStatus('canceled')->count(),
+            'total_order' => [
+                '10' => Order::whereBetween('order_date', [ 
+                    Carbon::parse('2021-01-01')->subYears(10), 
+                    Carbon::parse('2021-12-31')->subYears(10) ]
+                )->where('category', '=', $category)->count(),
+                '9' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(9), 
+                            Carbon::parse('2021-12-31')->subYears(9) ]
+                        )->where('category', '=', $category)->count(),
+                '8' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(8), 
+                            Carbon::parse('2021-12-31')->subYears(8) ]
+                        )->where('category', '=', $category)->count(),
+                '7' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(7), 
+                            Carbon::parse('2021-12-31')->subYears(7) ]
+                        )->where('category', '=', $category)->count(),
+                '6' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(6), 
+                            Carbon::parse('2021-12-31')->subYears(6) ]
+                        )->where('category', '=', $category)->count(),
+                '5' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(5), 
+                            Carbon::parse('2021-12-31')->subYears(5) ]
+                        )->where('category', '=', $category)->count(),
+                '4' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(4), 
+                            Carbon::parse('2021-12-31')->subYears(4) ]
+                        )->where('category', '=', $category)->count(),
+                '3' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(3), 
+                            Carbon::parse('2021-12-31')->subYears(3) ]
+                        )->where('category', '=', $category)->count(),
+                '2' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(2), 
+                            Carbon::parse('2021-12-31')->subYears(2) ]
+                        )->where('category', '=', $category)->count(),
+                '1' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01')->subYears(1), 
+                            Carbon::parse('2021-12-31')->subYears(1) ]
+                        )->where('category', '=', $category)->count(),
+                '0' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01'), 
+                            Carbon::parse('2021-12-31') ]
+                        )->where('category', '=', $category)->count(),
+            ]
+        ];
+
+        return view('category')->withData($data);
+    }
 }

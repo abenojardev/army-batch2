@@ -11,3 +11,16 @@ Route::get('/orders', [
     App\Http\Controllers\ReportingController::class,
     'orders'
 ]);
+
+
+
+Route::get('/summary', [
+    App\Http\Controllers\ReportingController::class,
+    'summary'
+]);
+
+
+Route::get('/category/{category}', [
+    App\Http\Controllers\ReportingController::class,
+    'category'
+]);
