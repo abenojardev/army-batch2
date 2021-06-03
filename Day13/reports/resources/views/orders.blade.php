@@ -51,19 +51,7 @@
                         </small> 
                     </div>
                 </div>
-            </div> 
-            <div class="col-3 mb-2">
-                <div class="card"> 
-                    <div class="card-body">
-                        <h5 class="card-title"> 
-                            {{ $data['category']['Books'] }}
-                        </h5>
-                        <small class="card-text">
-                            Books category orders
-                        </small> 
-                    </div>
-                </div>
-            </div> 
+            </div>  
             <div class="col-3 mb-2">
                 <div class="card"> 
                     <div class="card-body">
@@ -135,11 +123,102 @@
                         </small> 
                     </div>
                 </div>
+            </div>
+            
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['status']['processing'] }}
+                        </h5>
+                        <small class="card-text">
+                            Processing orders
+                        </small> 
+                    </div>
+                </div>
             </div>  
+            
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['status']['shipped'] }}
+                        </h5>
+                        <small class="card-text">
+                            Shipped orders
+                        </small> 
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['status']['delivered'] }}
+                        </h5>
+                        <small class="card-text">
+                            Delivered orders
+                        </small> 
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['status']['canceled'] }}
+                        </h5>
+                        <small class="card-text">
+                            Canceled orders
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['promotion']['used'] }}
+                        </h5>
+                        <small class="card-text">
+                            Orders with promotion
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['promotion']['not_used'] }}
+                        </h5>
+                        <small class="card-text">
+                            Orders with no promotion
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-3"></div>
+            <div class="col-4">
+                <canvas id="bycategory" width="100px" height="100px"></canvas>
+            </div> 
+            <div class="col-4">
+                <canvas id="bystatus" width="100px" height="100px"></canvas>
+            </div> 
+            <div class="col-4">
+                <canvas id="bypromo" width="100px" height="100px"></canvas>
+            </div> 
         </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+    
+    </script>
 </body>
 </html>
