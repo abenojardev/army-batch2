@@ -48,7 +48,7 @@ class ReportingController extends Controller
             'category' => [
                 'Toys' => Order::whereCategory('Toys')->count(), 
                 'Books' => Order::whereCategory('Books')->count(), 
-                'Home Supplies' => Order::whereCategory('Home Supplies')->count(),
+                'Home_Supplies' => Order::whereCategory('Home Supplies')->count(),
                 'Accessories' => Order::whereCategory('Accessories')->count(), 
                 'Gadgets' => Order::whereCategory('Gadgets')->count(), 
                 'Food' => Order::whereCategory('Food')->count(), 
@@ -105,10 +105,14 @@ class ReportingController extends Controller
                             Carbon::parse('2021-01-01')->subYears(1), 
                             Carbon::parse('2021-12-31')->subYears(1) ]
                         )->count(),
+                '0' => Order::whereBetween('order_date', [ 
+                            Carbon::parse('2021-01-01'), 
+                            Carbon::parse('2021-12-31') ]
+                        )->count(),
             ]
         ];
 
 
-        dd($data);
+        return view('orders')->withData($data); 
     }
 }
