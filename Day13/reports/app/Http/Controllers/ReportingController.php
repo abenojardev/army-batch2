@@ -92,7 +92,7 @@ class ReportingController extends Controller
                 '4' => Order::whereBetween('order_date', [ 
                             Carbon::parse('2021-01-01')->subYears(4), 
                             Carbon::parse('2021-12-31')->subYears(4) ]
-                        ),
+                        )->where('status', '!=', 'canceled')->sum('total'),
                 '3' => Order::whereBetween('order_date', [ 
                             Carbon::parse('2021-01-01')->subYears(3), 
                             Carbon::parse('2021-12-31')->subYears(3) ]
@@ -111,8 +111,7 @@ class ReportingController extends Controller
                         )->where('status', '!=', 'canceled')->sum('total'),
             ]
         ];
-
-
+ 
         return view('orders')->withData($data); 
     }
 }

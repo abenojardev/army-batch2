@@ -214,7 +214,7 @@
             </div> 
 
             <div class="col-12">
-                <canvas id="byyear" width="100%" height="auto"></canvas>
+                <canvas id="byyear" width="100%" height="50px"></canvas>
             </div> 
         </div>
     </div>
@@ -342,28 +342,63 @@ var myChart = new Chart(document.getElementById('bypromo').getContext('2d'), {
 
 
         // Line chart 
-        var myChart = new Chart(document.getElementById('myChart').getContext('2d');, {
+        var myChart = new Chart(document.getElementById('byyear').getContext('2d'), {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: [
+                    '2010',
+                    '2011',
+                    '2012',
+                    '2013',
+                    '2014',
+                    '2015',
+                    '2016',
+                    '2017',
+                    '2018',
+                    '2019',
+                    '2020',
+                    '2021'   
+                ],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    label: 'Yearly Sales',
+                    data: [
+                        {{ $data['year']['10'] }},
+                        {{ $data['year']['9'] }},
+                        {{ $data['year']['8'] }},
+                        {{ $data['year']['7'] }},
+                        {{ $data['year']['6'] }},
+                        {{ $data['year']['5'] }},
+                        {{ $data['year']['4'] }},
+                        {{ $data['year']['3'] }},
+                        {{ $data['year']['2'] }},
+                        {{ $data['year']['1'] }},
+                        {{ $data['year']['0'] }}
+                    ],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        'red',
+                        'orange',
+                        'yellow',
+                        'green',
+                        'blue',
+                        'indigo',
+                        'violet',
+                        'black',
+                        'pink',
+                        'dandelion',
+                        'purple',
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'red',
+                        'orange',
+                        'yellow',
+                        'green',
+                        'blue',
+                        'indigo',
+                        'violet',
+                        'black',
+                        'pink',
+                        'dandelion',
+                        'purple',
                     ],
                     borderWidth: 1
                 }]
