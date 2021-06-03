@@ -218,7 +218,52 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script>
-    
+        var myChart = new Chart(document.getElementById('bycategory').getContext('2d'), {
+            type: 'pie',
+            data: {
+                labels: [
+                    'Toys',
+                    'Books',
+                    'Home Supplies',
+                    'Accessories',
+                    'Gadgets',
+                    'Food',
+                    'Appliances'
+                ],
+                datasets: [{ 
+                    data: [
+                        {{ $data['category']['Toys'] }},
+                        {{ $data['category']['Books'] }},
+                        {{ $data['category']['Home_Supplies'] }},
+                        {{ $data['category']['Accessories'] }},
+                        {{ $data['category']['Gadgets'] }},
+                        {{ $data['category']['Food'] }},
+                        {{ $data['category']['Appliances'] }}
+                    ],
+                    backgroundColor: [
+                        'blue',
+                        'brown',
+                        'silver',
+                        'black',
+                        'pink',
+                        'yellow',
+                        'green'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Orders per Category'
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>
