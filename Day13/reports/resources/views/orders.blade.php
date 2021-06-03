@@ -26,6 +26,115 @@
                         </small> 
                     </div>
                 </div>
+            </div>
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ number_format($data['avg_order_total'], 2, '.', ',') }}
+                        </h5>
+                        <small class="card-text">
+                            Average Order
+                        </small> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['category']['Toys'] }}
+                        </h5>
+                        <small class="card-text">
+                            Toys category orders
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['category']['Books'] }}
+                        </h5>
+                        <small class="card-text">
+                            Books category orders
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['category']['Books'] }}
+                        </h5>
+                        <small class="card-text">
+                            Books category orders
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['category']['Home_Supplies'] }}
+                        </h5>
+                        <small class="card-text">
+                            Home Supplies category orders
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['category']['Accessories'] }}
+                        </h5>
+                        <small class="card-text">
+                            Accessories category orders
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['category']['Gadgets'] }}
+                        </h5>
+                        <small class="card-text">
+                            Gadgets category orders
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['category']['Food'] }}
+                        </h5>
+                        <small class="card-text">
+                            Food category orders
+                        </small> 
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 mb-2">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h5 class="card-title"> 
+                            {{ $data['category']['Appliances'] }}
+                        </h5>
+                        <small class="card-text">
+                            Appliances category orders
+                        </small> 
+                    </div>
+                </div>
             </div>  
         </div>
     </div>
