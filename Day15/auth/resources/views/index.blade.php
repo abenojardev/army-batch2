@@ -20,6 +20,7 @@
                         {{ Auth::user()->email }}
                     </p>
                     <a href="{{ URL::route('app.logout') }}" class="btn btn-primary">Logout</a>
+                    <a href="{{ URL::route('app.chat') }}" class="btn btn-success">Chat Box</a>
                 </div>
             </div>
         </div>

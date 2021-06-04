@@ -11,6 +11,10 @@ Route::group(['middleware' => 'user'], function(){
         App\Http\Controllers\AuthController::class,
         'logout'
     ])->name('app.logout');
+    Route::get('/chat', [
+        App\Http\Controllers\AuthController::class,
+        'chat'
+    ])->name('app.chat');
 });
 
 Route::group(['middleware' => 'guest'], function(){

@@ -76,4 +76,9 @@ class AuthController extends Controller
 
         return Redirect::route('app.login');
     }
+
+    public function chat()
+    {
+        
+    }
 }
