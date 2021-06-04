@@ -10,29 +10,30 @@
 <body>
     <div class="container">
         <div class="row sontent-center mt-5"> 
+            @foreach($data as $chat)
                 <div class="card" style="width: auto;">
                     <div class="row pt-2">
                         <div class="col-1">
-                            <img width="100%;" src="{{ URL::asset('storage/'.Auth::user()->avatar) }}" class="xcard-img-top rounded-pill" alt="...">
+                            <img width="100%;" src="{{ URL::asset('storage/'.$chat->avatar) }}" class="xcard-img-top rounded-pill" alt="...">
                         </div>
                         <div class="col-11"> 
                                 <h5 class="card-title">
-                                    {{ Auth::user()->name }}
+                                    {{ $chat->name }}
                                 </h5>
                                 <p class="card-text">
-                                    1min ago
+                                    {{ $chat->created_at->diffForHumans() }}
                                 </p> 
                             </div>
                         </div>
                         <div class="col-12 text-muted">
                         <small>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit odit vel quos ab autem debitis quas minima possimus illum quo beatae, expedita similique esse delectus vero repellat temporibus reiciendis amet.
+                            {{ $chat->message }}
                         </small>
                         </div>
-                    </div> 
-
+                    </div>  
                 </div>  
-            <div class="col-6 mt-5">
+            @endforeach
+            <div class="col-6- mt-5">
                 <form action="{{ URL::route('app.chat.send') }}" method="post">
                     @csrf
                     <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
