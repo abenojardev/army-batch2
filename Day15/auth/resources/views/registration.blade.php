@@ -10,18 +10,19 @@
 <body>
     <div class="container">
         <div class="row d-flex justify-content-center mt-5">
-            <form class="col-4">
+            <form action="{{ URL::route('app.registration.verify') }}" method="post" class="col-4">
+                @csrf
                 <div class="mb-3">
                     <label class="form-label">Avatar</label>
-                    <input type="file" class="form-control"> 
+                    <input type="file" class="form-control" name="avatar"> 
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email address</label>
-                    <input type="email" class="form-control"> 
+                    <input type="email" class="form-control" name="email"> 
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control" name="password">
                 </div> 
                 <a href="{{ URL::route('app.login') }}">Login to your account</a>
                 <br>
