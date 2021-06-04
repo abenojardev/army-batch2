@@ -22,7 +22,7 @@ class User
         // Auth::check() returns true if the user
         // is logged in and false if not
         if(!Auth::check()){
-            return Redirect::route('login');
+            return Redirect::route('app.login');
         }  
 
         return $next($request);
