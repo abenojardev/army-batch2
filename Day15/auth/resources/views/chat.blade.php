@@ -33,7 +33,7 @@
 
                 </div>  
             <div class="col-6 mt-5">
-                <form action="" method="post">
+                <form action="{{ URL::route('app.chat.send') }}" method="post">
                     @csrf
                     <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
                     <button class="btn btn-primary">Send</button>

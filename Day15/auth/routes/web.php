@@ -15,6 +15,11 @@ Route::group(['middleware' => 'user'], function(){
         App\Http\Controllers\AuthController::class,
         'chat'
     ])->name('app.chat');
+
+    Route::post('/chat/send', [
+        App\Http\Controllers\AuthController::class,
+        'chat_send'
+    ])->name('app.chat.send');
 });
 
 Route::group(['middleware' => 'guest'], function(){

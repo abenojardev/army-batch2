@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Redirect, Storage, Auth;
 use App\Models\User;
+use App\Models\Message;
 
 class AuthController extends Controller
 {
@@ -80,5 +81,18 @@ class AuthController extends Controller
     public function chat()
     {
         return view('chat');
+    }
+
+    public function chat_send()
+    {
+        $this->request->merge([
+            'user_id' => Auth::user()->id
+        ]);
+
+        Message::create(
+            $this->request->except('_token')
+        );
+
+        return Redirect::route('app.chat');
     }
 }
