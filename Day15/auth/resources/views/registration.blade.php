@@ -10,11 +10,15 @@
 <body>
     <div class="container">
         <div class="row d-flex justify-content-center mt-5">
-            <form action="{{ URL::route('app.registration.verify') }}" method="post" class="col-4">
+            <form enctype="multipart/form-data" action="{{ URL::route('app.registration.verify') }}" method="post" class="col-4">
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Avatar</label>
-                    <input type="file" class="form-control" name="avatar"> 
+                    <input type="file" class="form-control" name="file"> 
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name"> 
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email address</label>
