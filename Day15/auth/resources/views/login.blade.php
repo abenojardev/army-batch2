@@ -10,14 +10,15 @@
 <body>
     <div class="container">
         <div class="row d-flex justify-content-center mt-5">
-            <form class="col-4">
+            <form method="post" action="{{ URL::route('app.login.verify') }}" class="col-4">
+                @csrf
                 <div class="mb-3">
                     <label class="form-label">Email address</label>
-                    <input type="email" class="form-control"> 
+                    <input type="email" class="form-control" name="email"> 
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control" name="password">
                 </div> 
                 <a href="{{ URL::route('app.registration') }}">Create an account</a>
                 <br>

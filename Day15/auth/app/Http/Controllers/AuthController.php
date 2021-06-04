@@ -32,7 +32,7 @@ class AuthController extends Controller
 
     public function login_verify()
     {
-
+        dd($this->request->all());
     }
 
     public function registration_verify()
