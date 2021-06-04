@@ -12,6 +12,15 @@
         <div class="row d-flex justify-content-center mt-5">
             <form method="post" action="{{ URL::route('app.login.verify') }}" class="col-4">
                 @csrf
+
+                @if(session('error'))
+                    <div class="mb-3"> 
+                        <span class="alert alert-sm alert-danger">
+                            {{ session('error') }}
+                        </span>
+                    </div>
+                @endif
+
                 <div class="mb-3">
                     <label class="form-label">Email address</label>
                     <input type="email" class="form-control" name="email"> 

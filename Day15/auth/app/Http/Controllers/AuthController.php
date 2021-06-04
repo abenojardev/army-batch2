@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Redirect, Storage;
+use Redirect, Storage, Auth;
 use App\Models\User;
 
 class AuthController extends Controller
@@ -32,7 +32,15 @@ class AuthController extends Controller
 
     public function login_verify()
     {
-        dd($this->request->all());
+        $login = Auth::attempt($this->request->except('_token'));
+
+        if($login){
+            // redirect to homepage
+            Redirect::route('app');
+        }
+
+        return Redirect::route('app.login')
+                    ->withError('Invalid user credentials !');
     }
 
     public function registration_verify()
