@@ -33,14 +33,14 @@ class AuthController extends Controller
     public function login_verify()
     {
         $login = Auth::attempt($this->request->except('_token'));
-
+         
         if($login){
             // redirect to homepage
-            Redirect::route('app');
+            return Redirect::route('app');
         }
 
         return Redirect::route('app.login')
-                    ->withError('Invalid user credentials !');
+                    ->withError('Invalid user credentials ....!');
     }
 
     public function registration_verify()
