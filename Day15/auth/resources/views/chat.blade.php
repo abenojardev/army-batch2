@@ -12,10 +12,10 @@
         <div class="row sontent-center mt-5"> 
                 <div class="card" style="width: auto;">
                     <div class="row pt-2">
-                        <div class="col-3">
-                            <img width="10px" src="{{ URL::asset('storage/'.Auth::user()->avatar) }}" class="card-img-top rounded-pill" alt="...">
+                        <div class="col-1">
+                            <img width="100%;" src="{{ URL::asset('storage/'.Auth::user()->avatar) }}" class="xcard-img-top rounded-pill" alt="...">
                         </div>
-                        <div class="col-9"> 
+                        <div class="col-11"> 
                                 <h5 class="card-title">
                                     {{ Auth::user()->name }}
                                 </h5>
@@ -31,11 +31,12 @@
                         </div>
                     </div> 
 
-                </div> 
-            <div class="col-6">
+                </div>  
+            <div class="col-6 mt-5">
                 <form action="" method="post">
                     @csrf
                     <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
+                    <button class="btn btn-primary">Send</button>
                 </form>
             </div>
         </div>
