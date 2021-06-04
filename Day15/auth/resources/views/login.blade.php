@@ -19,6 +19,8 @@
                     <label class="form-label">Password</label>
                     <input type="password" class="form-control">
                 </div> 
+                <a href="{{ URL::route('app.registration') }}">Create an account</a>
+                <br>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
