@@ -11,13 +11,15 @@
     <div class="container">
         <div class="row d-flex justify-content-center mt-5">
             <div class="card" style="width: 18rem;">
-                <img src="https://i0.wp.com/outfittrends.com/wp-content/uploads/2016/11/men-beard-styles-for-round-face.jpg" class="card-img-top rounded-pill" alt="...">
+                <img src="{{ URL::asset('storage/'.Auth::user()->avatar) }}" class="card-img-top rounded-pill" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Juan Dela Cruz</h5>
+                    <h5 class="card-title">
+                        {{ Auth::user()->name }}
+                    </h5>
                     <p class="card-text">
-                        juan.delacruz@gmail.com
+                        {{ Auth::user()->email }}
                     </p>
-                    <a href="#" class="btn btn-primary">Logout</a>
+                    <a href="{{ URL::route('app.logout') }}" class="btn btn-primary">Logout</a>
                 </div>
             </div>
         </div>

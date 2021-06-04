@@ -16,7 +16,7 @@ class AuthController extends Controller
     }
 
     public function index()
-    {
+    { 
         return view('index');
     }
 
@@ -67,6 +67,13 @@ class AuthController extends Controller
         );
 
         // redirect
+        return Redirect::route('app.login');
+    }
+    
+    public function logout()
+    {
+        Auth::logout();
+
         return Redirect::route('app.login');
     }
 }

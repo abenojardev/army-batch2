@@ -26,3 +26,9 @@ Route::post('/registration/verify', [
     App\Http\Controllers\AuthController::class,
     'registration_verify'
 ])->name('app.registration.verify');
+
+
+Route::get('/logout', [
+    App\Http\Controllers\AuthController::class,
+    'logout'
+])->name('app.logout');
