@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row sontent-center mt-5"> 
+                <div class="card" style="width: auto;">
+                    <div class="row pt-2">
+                        <div class="col-3">
+                            <img width="10px" src="{{ URL::asset('storage/'.Auth::user()->avatar) }}" class="card-img-top rounded-pill" alt="...">
+                        </div>
+                        <div class="col-9"> 
+                                <h5 class="card-title">
+                                    {{ Auth::user()->name }}
+                                </h5>
+                                <p class="card-text">
+                                    1min ago
+                                </p> 
+                            </div>
+                        </div>
+                        <div class="col-12 text-muted">
+                        <small>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit odit vel quos ab autem debitis quas minima possimus illum quo beatae, expedita similique esse delectus vero repellat temporibus reiciendis amet.
+                        </small>
+                        </div>
+                    </div> 
+
+                </div> 
+            <div class="col-6">
+                <form action="" method="post">
+                    @csrf
+                    <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
