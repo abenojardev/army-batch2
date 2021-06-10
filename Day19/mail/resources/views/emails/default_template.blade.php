@@ -12,7 +12,7 @@
             height="100%" 
             width="100%"> 
         <tr>
-            <td align="center" valign="top">
+            <td align="center" valign="top" style="max-width: 750px;">
                 <table style="background-color: white;" width="750px">
                 
                 </table>
