@@ -15,12 +15,12 @@ class HomeController extends Controller
 
     public function index()
     {
-
+        return view('index');
     }
 
     public function template()
     {
-
+        return view('emails.default_template');
     }
 
     public function send()
