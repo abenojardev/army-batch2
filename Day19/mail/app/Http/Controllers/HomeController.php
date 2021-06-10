@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Mail\NewsMailer;
-use Mail, Redirect;
+use Illuminate\Http\Request; 
+use Redirect;
 
 class HomeController extends Controller
 {
@@ -27,14 +26,10 @@ class HomeController extends Controller
 
     public function send()
     { 
-        $template = new NewsMailer([
+        [
             'text' => $this->request->message, 
             'email' => $this->request->email
-        ]);
-
-        Mail::to($this->request->email)
-            ->send($template);
-
+        ]
         return Redirect::route('home');
     }
 
