@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function send()
     { 
         $template = new NewsMailer([
-            'message' => $this->request->message, 
+            'text' => $this->request->message, 
             'email' => $this->request->email
         ]);
 

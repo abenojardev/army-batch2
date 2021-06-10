@@ -38,7 +38,7 @@
                         <td style="padding:5%;  color:white; font-size: 30px;">
                             Hello {{ $email }},
                             <br><br><br>
-                            {{ $message }}
+                            {{ $text }}
                         </td>
                     </tr>
                 </table>
