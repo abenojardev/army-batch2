@@ -23,6 +23,7 @@
                     </tr>
                     <tr>
                         <td align="center">
+                            <br><br>
                             <b style="font-size: 50px; color: white;">
                                 CGPA visits soldiers of 2nd Infantry Division
                             </b>
