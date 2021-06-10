@@ -21,6 +21,13 @@
                                  src="https://www.army.mil.ph/home/images/logo/pa-logo.png">
                         </td>
                     </tr>
+                    <tr>
+                        <td align="center">
+                            <b style="font-size: 50px; color: white;">
+                                CGPA visits soldiers of 2nd Infantry Division
+                            </b>
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>  
