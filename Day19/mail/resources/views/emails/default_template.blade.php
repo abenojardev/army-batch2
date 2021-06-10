@@ -11,12 +11,15 @@
             cellspacing="0" 
             height="100%" 
             width="100%"
-            style="background-color: #333;"> 
+            style="background-color: white;"> 
         <tr>
             <td align="center" valign="top" style="max-width: 750px;">
-                <table style="background-color: white;" width="750px">
+                <table style="background-color: #333;" width="750px">
                     <tr>
-                        <td>sd</td>
+                        <td align="center">
+                            <img width="50%"
+                                 src="https://www.army.mil.ph/home/images/logo/pa-logo.png">
+                        </td>
                     </tr>
                 </table>
             </td>
