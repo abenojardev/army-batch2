@@ -11,17 +11,16 @@ class NewsMailer extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $message, $email;
+    protected $data;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($message, $email)
+    public function __construct($data)
     {
-        $this->message = $message;
-        $this->email = $email;
+        $this->data = $data; 
     }
 
     /**
@@ -30,11 +29,8 @@ class NewsMailer extends Mailable
      * @return $this
      */
     public function build()
-    {
+    { 
         return $this->view('emails.default_template') 
-                    ->with([
-                        'message' => $this->message,
-                        'email' => $this->email
-                    ]);
+                    ->with($this->data);
     }
 }

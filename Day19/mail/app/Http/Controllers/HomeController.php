@@ -26,11 +26,16 @@ class HomeController extends Controller
     }
 
     public function send()
-    {
-        $template = new NewsMailer(
-            $this->request->message, 
-            $this->request->email
-        );
+    { 
+        $template = new NewsMailer([
+            'message' => $this->request->message, 
+            'email' => $this->request->email
+        ]);
+
+        Mail::to($this->request->email)
+            ->send($template);
+
+        return Redirect::route('home');
     }
 
 }
