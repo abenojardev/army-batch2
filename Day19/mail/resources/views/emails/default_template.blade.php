@@ -24,9 +24,21 @@
                     <tr>
                         <td align="center">
                             <br><br>
-                            <b style="font-size: 50px; color: white;">
+                            <b style="font-size: 70px; color: white;">
                                 CGPA visits soldiers of 2nd Infantry Division
                             </b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://www.army.mil.ph/home/images/2021/Press_Release_2021/cgpavisits24.jpg" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:5%;  color:white; font-size: 30px;">
+                            Hello Juan,
+                            <br><br><br>
+                            message
                         </td>
                     </tr>
                 </table>
