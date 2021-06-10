@@ -10,11 +10,14 @@
             cellpadding="0" 
             cellspacing="0" 
             height="100%" 
-            width="100%"> 
+            width="100%"
+            style="background-color: #333;"> 
         <tr>
             <td align="center" valign="top" style="max-width: 750px;">
                 <table style="background-color: white;" width="750px">
-                
+                    <tr>
+                        <td>sd</td>
+                    </tr>
                 </table>
             </td>
         </tr>  
