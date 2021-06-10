@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\NewsMailer;
+use Mail, Redirect;
 
 class HomeController extends Controller
 {
@@ -26,7 +27,10 @@ class HomeController extends Controller
 
     public function send()
     {
-        dd($this->request->all());
+        $template = new NewsMailer(
+            $this->request->message, 
+            $this->request->email
+        );
     }
 
 }
