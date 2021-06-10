@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 <body>
-    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+    <table  border="0" 
+            cellpadding="0" 
+            cellspacing="0" 
+            height="100%" 
+            width="100%"> 
         <tr>
             <td align="center" valign="top">
-
+                <table style="background-color: white;" width="750px">
+                
+                </table>
             </td>
-        </tr> 
+        </tr>  
     </table>
 </body>
 </html>
