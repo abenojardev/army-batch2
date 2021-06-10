@@ -31,6 +31,10 @@ class NewsMailer extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('emails.default_template') 
+                    ->with([
+                        'message' => $this->message,
+                        'email' => $this->email
+                    ]);
     }
 }
