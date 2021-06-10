@@ -36,9 +36,9 @@
                     </tr>
                     <tr>
                         <td style="padding:5%;  color:white; font-size: 30px;">
-                            Hello Juan,
+                            Hello {{ $email }},
                             <br><br><br>
-                            message
+                            {{ $message }}
                         </td>
                     </tr>
                 </table>
