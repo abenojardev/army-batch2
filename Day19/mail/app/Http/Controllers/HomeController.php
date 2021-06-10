@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     protected $request;
 
-    public function __contruct(Request $request)
+    public function __construct(Request $request)
     {
         $this->request = $request;
     }
@@ -25,7 +25,7 @@ class HomeController extends Controller
 
     public function send()
     {
-
+        dd($this->request->all());
     }
 
 }
