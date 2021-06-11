@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request; 
+use App\Jobs\MailerJob;
 use Redirect;
 
 class HomeController extends Controller
@@ -25,12 +26,12 @@ class HomeController extends Controller
     }
 
     public function send()
-    { 
-        [
+    {   
+        MailerJob::dispatch([
             'text' => $this->request->message, 
             'email' => $this->request->email
-        ]
+        ])->onQueue('emails'); 
+         
         return Redirect::route('home');
     }
-
 }
