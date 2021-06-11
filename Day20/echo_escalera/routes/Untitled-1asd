@@ -1,0 +1,14 @@
+// Client
+composer require beyondcode/laravel-websockets
+
+// publishing of package migrations & config
+php artisan vendor:publish
+
+
+php artisan migrate
+
+// Server
+composer require pusher/pusher-php-server "~3.0"
+
+// .env
+BROADCAST_DRIVER=pusher
