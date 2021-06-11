@@ -19,11 +19,13 @@ var token = document.querySelector('meta[name="csrf-token"]').getAttribute('cont
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__.default({
   broadcaster: 'pusher',
   key: '40e519fc66cf9c32abeb',
-  wsHost: defaultlocation,
+  wsHost: 'localhost',
   wsPort: 6001,
-  disableStats: true,
+  wssPort: 6001,
+  disableStats: false,
+  encrypted: false,
   csrfToken: token,
-  enabledTransports: ['ws']
+  enabledTransports: ['ws', 'wss']
 });
 
 /***/ }),

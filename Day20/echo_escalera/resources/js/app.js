@@ -8,10 +8,12 @@ let token = document.querySelector('meta[name="csrf-token"]')
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: '40e519fc66cf9c32abeb', 
-    wsHost: defaultlocation,
-    wsPort: 6001,
-    disableStats: true,
+    wsHost: 'localhost',
+    wsPort: 6001, 
+    wssPort: 6001,
+    disableStats: false,
+    encrypted: false,
     csrfToken: token, 
-    enabledTransports: ['ws'] 
+    enabledTransports: ['ws', 'wss'] 
 });
 

@@ -36,12 +36,16 @@ return [
             'secret' => '0b2c7a4092070f14dcd3',
             'app_id' => '1217810',
             'options' => [
-                // 'cluster' => 'ap1',
-                // 'useTLS' => true, 
+                'cluster' => 'ap1',
+                'useTLS' => true, 
                 'encrypted' => false,
                 'host' => '127.0.0.1',
                 'port' => 6001,
-                'scheme' => 'http'
+                'scheme' => 'http',
+                'curl_options' => [
+                    CURLOPT_SSL_VERIFYHOST => 0,
+                    CURLOPT_SSL_VERIFYPEER => 0,
+                ]
             ],
         ],
 
